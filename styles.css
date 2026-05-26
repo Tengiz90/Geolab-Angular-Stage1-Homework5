@@ -58,6 +58,7 @@ html, body {
 
 body {
     background-color: #F1F1F1;
+    padding-top: 60px; 
 }
 
 section {
@@ -73,7 +74,7 @@ section h2 {
 }
 
 section:first-of-type {
-    margin-top: 76px;
+    margin-top: 40px; 
 }
 
 section:last-child {
@@ -111,7 +112,7 @@ header li:first-of-type {
 
 #trending-posts-wrapper {
     display: flex;              
-    flex-wrap: nowrap;         
+    flex-wrap: nowrap;          
     overflow-x: auto;      
     gap: 40px;          
     padding-bottom: 15px;
@@ -216,8 +217,8 @@ header li:first-of-type {
 }
 
 #happening-now-posts-cols-wrapper .col-1-wrapper {
-    flex: 1; 
-    min-width: 0;
+    width: 758px;
+    flex-shrink: 0;
 }
 
 #happening-now-posts-cols-wrapper .col-2-wrapper {
@@ -229,10 +230,10 @@ header li:first-of-type {
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    width: 100%;
 }
 
 #happening-now-posts-cols-wrapper > .col-1-wrapper .image {
+    width: 758px;
     height: 430px;
     margin-bottom: 42px;
 }
@@ -258,6 +259,7 @@ header li:first-of-type {
 }
 
 #happening-now-posts-cols-wrapper > .col-2-wrapper .image {
+    width: 100%;
     height: 212px;
     margin-bottom: 93px;
 }
@@ -297,6 +299,7 @@ footer ul li {
     color: #A4B2C6; 
     font-size: 13px;
     font-weight: 400;
+    line-height: 1; 
     margin-bottom: 15px;
     cursor: pointer;
 }
@@ -312,18 +315,26 @@ footer div {
     margin-left: 0;
     margin-right: auto;
     max-width: 240px;
-    line-height: 1.4;
-    padding-top: 0;
-    align-self: flex-start;
+    line-height: 1; 
 } 
 
 footer img {
     height: 45px; 
     object-fit: contain;
-    align-self: center;
+    align-self: flex-start;
+}
+
+@media (max-width: 1440px) {
+    #happening-now-posts-cols-wrapper {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1320px) {
+    body {
+        padding-top: 80px;
+    }
+
     section {
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -352,7 +363,7 @@ footer img {
     #happening-now-posts-cols-wrapper > .col-2-wrapper {
         display: block;       
         width: 100%;        
-        max-width: 500px; 
+        max-width: 758px; 
         box-sizing: border-box;
     }
 
@@ -361,7 +372,7 @@ footer img {
     #happening-now-posts-cols-wrapper > .col-2-wrapper .image {
         width: 100% !important;    
         max-width: 100%;
-        height: 250px !important;   
+        height: 380px !important;   
         margin-left: 0 !important; 
         margin-right: 0 !important;
         margin-bottom: 20px !important; 
@@ -382,6 +393,7 @@ footer img {
         margin-right: 0;
         max-width: 100%;
         width: 100%;
+        line-height: 1.4; 
     }
 
     footer img {
@@ -425,9 +437,9 @@ footer img {
     }
 
     #happening-now-posts-cols-wrapper .image,
-    #happening-now-posts-cols-wrapper > .col-1-wrapper .image {
+    #happening-now-posts-cols-wrapper > .col-1-wrapper .image,
+    #happening-now-posts-cols-wrapper > .col-2-wrapper .image {
         width: 100% !important;
         height: 190px !important; 
     }
 }
-
